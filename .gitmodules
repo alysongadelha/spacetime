@@ -1,0 +1,6 @@
+[submodule "web"]
+	path = web
+	url = https://github.com/alysongadelha/web.git
+[submodule "mobile"]
+	path = mobile
+	url = https://github.com/alysongadelha/mobile.git
