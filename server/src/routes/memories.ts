@@ -23,6 +23,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
       excerpt: content.substring(0, 155).concat("..."),
     }));
   });
+
   app.get("/memories/:id", async (request, reply) => {
     const paramSchema = z.object({
       id: z.string().uuid(),
