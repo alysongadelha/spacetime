@@ -20,7 +20,11 @@ app.register(require("@fastify/static"), {
 
 app.register(cors, {
   //   origin: true, // all front-end URLS could access our back-end
-  origin: ["https://localhost:6969", "https://localhost:5555"],
+  origin: [
+    "http://localhost:6969",
+    "http://localhost:5555",
+    "http://localhost:6001",
+  ],
 });
 app.register(jwt, {
   secret: "spacetime",
@@ -33,7 +37,7 @@ app.register(memoriesRoutes);
 app
   .listen({
     port: 6969,
-    host: "0.0.0.0",
+    // host: "0.0.0.0",
   })
   .then(() => {
     console.log("HTTP server running on localhost:6969");

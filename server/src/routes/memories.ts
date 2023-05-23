@@ -17,10 +17,11 @@ export async function memoriesRoutes(app: FastifyInstance) {
       },
     });
 
-    return memories.map(({ id, coverUrl, content }) => ({
+    return memories.map(({ id, coverUrl, content, createdAt }) => ({
       id,
       coverUrl,
       excerpt: content.substring(0, 155).concat("..."),
+      createdAt,
     }));
   });
 
